@@ -6,36 +6,7 @@
     </head>
     <body style="">
         <script type="text/javascript">
-            document.addEventListener('WeixinJSBridgeReady', function onBridgeReady() {
-                // 发送给好友
-                WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-                    WeixinJSBridge.invoke('sendAppMessage', {
-                        "appid": "123",
-                        "img_url": "http://himg2.huanqiu.com/attachment2010/2017/0405/20170405101600628.jpg",
-                        "img_width": "160",
-                        "img_height": "160",
-                        "link": "https://www.baidu.com/",
-                        "desc":  "山无陵，天地合，乃敢与君绝。",
-                        "title": "爱情贺卡"
-                    }, function (res) {
-                        _report('send_msg', res.err_msg);
-                    })
-                });
-
-                // 分享到朋友圈
-                WeixinJSBridge.on('menu:share:timeline', function (argv) {
-                    WeixinJSBridge.invoke('shareTimeline', {
-                        "img_url": "http://himg2.huanqiu.com/attachment2010/2017/0405/20170405101600628.jpg",
-                        "img_width": "160",
-                        "img_height": "160",
-                        "link": "https://www.baidu.com/",
-                        "desc":  "Best wishes for a wonderful new year.",
-                        "title": "新年贺卡"
-                    }, function (res) {
-                        _report('timeline', res.err_msg);
-                    });
-                });
-            }, false)
+            console.log(WeixinJSBridge);
         </script>
     </body>
 </html>
